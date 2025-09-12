@@ -1,7 +1,25 @@
 import ProductData from "./ProductData.mjs";
+import {getParam} from "./utils.mjs";
 
+const productId = getParam('product');
 const category = 'tents'; 
 const dataSource = new ProductData(category);
+
+async function loadProduct() {
+  if (!productId) {
+    console.error('No product ID in URL');
+    return;
+  }
+  const product = await dataSource.findProductById(productId);
+  if (!product) {
+    console.error('Product not found');
+    return;
+  }
+  // Render product details
+  renderProductDetails(product);
+}
+
+loadProduct();
 
 document.addEventListener('DOMContentLoaded', () => {
   dataSource.getData().then((products) => {
