@@ -1,3 +1,5 @@
+
+
 function convertToJson(res) {
   if (res.ok) {
     return res.json();
@@ -5,6 +7,7 @@ function convertToJson(res) {
     throw new Error("Bad Response");
   }
 }
+
 
 export default class ProductData {
   constructor(category) {

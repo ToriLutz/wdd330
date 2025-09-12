@@ -1,3 +1,4 @@
+
 class ProductPage {
   constructor(productId, datasource) {
     this.productId = productId;
