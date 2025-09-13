@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const cTotal = document.querySelector('#total');
   let totalAmount = 0;
 
-  const storedItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+  const storedItems = JSON.parse(localStorage.getItem('so-cart')) || [];
   console.log("Cart items:", storedItems);
 
   storedItems.forEach(item => {
