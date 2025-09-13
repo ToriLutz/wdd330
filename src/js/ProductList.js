@@ -29,13 +29,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function displayProducts(products) {
   const container = document.getElementById('product-list');
-  
-
   products.forEach((product) => {
-
-     if (!product.Image || product.Image.trim() === "") {
-    return;
-  }
+    // doesn't show pages that don't have an image
+    if (!product.Image || product.Image.trim() === "") {
+            return;
+    };
     // Create list item
     const li = document.createElement('li');
     li.className = 'product-card';
