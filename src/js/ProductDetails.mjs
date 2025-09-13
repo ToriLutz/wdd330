@@ -1,4 +1,6 @@
-class ProductPage {
+import { getLocalStorage, setLocalStorage } from "./utils.mjs";
+
+export default class ProductDetails {
   constructor(productId, datasource) {
     this.productId = productId;
     this.product = {};
