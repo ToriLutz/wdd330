@@ -6,7 +6,9 @@ export default defineConfig({
 
   build: {
     outDir: "../dist",
+    sourceMap: true,
     rollupOptions: {
+  
       input: {
         main: resolve(__dirname, "src/index.html"),
         cart: resolve(__dirname, "src/cart/index.html"),
