@@ -1,6 +1,7 @@
 import { getLocalStorage, getParam } from "./utils.mjs";
 import ProductData from "./ProductData.mjs";
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const cTotal = document.querySelector('#total');
   let totalAmount = 0;
