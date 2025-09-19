@@ -31,24 +31,6 @@ export function getParam(param) {
 }
 
 
-/*export function renderWithTemplate(){
-  
-  const mainImage = document.getElementById('mainLogo');
-  mainImage.src = main.Image;
-  mainImage.alt = ('tent image for logo');
-
-
-  const mainName = document.getElementById('sleep');
-  document.querySelector('h2').textContent = mainName;
-
-  const mainCart = document.querySelector('.cart');
-
-  
-
-
-
-  
-}*/
 
 export function renderWithTemplate(template, parentElement, data, callback) {
   parentElement.innerHTML = template;
@@ -63,18 +45,18 @@ export async function loadTemplate(path) {
   return template;
 }
 
-export async function loadHeaderTemplate(){
+export async function loadHeaderTemplate(path){
   const headerTemplate = await loadTemplate("../partials/header.html");
   const headerElement = document.getElementById("mainHeader");
 
   renderWithTemplate(headerTemplate, headerElement);
 }
 
-export async function loadFooterTemplate() {
+export async function loadFooterTemplate(path) {
   const footerTemplate = await loadTemplate("../partials/footer.html");
   const footerElement = document.getElementById("mainFooter");
 
-  renderWithTemplate(footerTemplate, footerElementElement);
+  renderWithTemplate(footerTemplate, footerElement);
 }
 
 

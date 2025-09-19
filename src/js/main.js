@@ -1,12 +1,6 @@
 import { loadHeaderTemplate, loadFooterTemplate } from "./utils.mjs";
-import ProductData from "./ProductData.mjs";
-import ProductList from "./ProductList.mjs";
 
-loadHeaderTemplate();
-loadFooterTemplate();
 
-const dataSource = new ProductData("tents");
-const element = document.querySelector(".product-list");
-const productList = new ProductList("Tents", dataSource, element);
+loadHeaderTemplate(path);
+loadFooterTemplate(path);
 
-productList.init();
