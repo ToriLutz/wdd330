@@ -45,14 +45,14 @@ export async function loadTemplate(path) {
   return template;
 }
 
-export async function loadHeaderTemplate(path){
+export async function loadHeaderTemplate(){
   const headerTemplate = await loadTemplate("../partials/header.html");
   const headerElement = document.getElementById("mainHeader");
 
   renderWithTemplate(headerTemplate, headerElement);
 }
 
-export async function loadFooterTemplate(path) {
+export async function loadFooterTemplate() {
   const footerTemplate = await loadTemplate("../partials/footer.html");
   const footerElement = document.getElementById("mainFooter");
 

@@ -1,4 +1,6 @@
 import { renderListWithTemplate } from "./utils.mjs";
+loadHeaderTemplate();
+loadFooterTemplate();
 
 function productCardTemplate(product) {
   return `
