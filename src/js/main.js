@@ -1,6 +1,6 @@
 
 import { loadHeaderTemplate, loadFooterTemplate } from "./utils.mjs";
-import { alert } from ",.alert.js";
+import  Alert from ",.alert.js";
 
 document.addEventListener('DOMContentLoaded', () => {
   loadHeaderTemplate();

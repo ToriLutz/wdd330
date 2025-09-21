@@ -1,4 +1,4 @@
-export default class alert {
+export default class Alert {
   constructor() {
     this.alert = [];
   }
