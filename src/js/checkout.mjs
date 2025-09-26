@@ -1,3 +1,8 @@
+import CheckoutProcess from './CheckoutProcess.js';
+
+const checkout = new CheckoutProcess('cartItems', '#order-summary');
+checkout.init();
+
 export default class CheckoutProcess {
   constructor(key, outputSelector) {
     this.key = key;
