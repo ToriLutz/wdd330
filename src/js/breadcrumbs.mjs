@@ -1,17 +1,12 @@
-import { getParam } from "./utils.mjs";
-
-
 document.addEventListener('DOMContentLoaded',() =>{
     const breadcrumbContainer = document.getElementById('breadcrumb-container');
 
-
-    const params = getUrlParams();
-    const categoryName = params['category'] || 'Category'; 
-    const productCount = parseInt(params['count']) || 0;
-    const urlPath = window.location.pathname; 
+    const urlPath = window.location.pathname;
+    const categoryName = 'Tents'; 
+    const productCount = 24; // Replace with dynamic data if needed
 
     if (urlPath === '/' || urlPath === '/index.html') {
-      breadcrumbContainer.innerHTML = '';
+      breadcrumbContainer.innerHTML = 'Home';
     } else if (urlPath.includes('/product_pages/index.html')) {
       // Product page
       breadcrumbContainer.innerHTML = `
