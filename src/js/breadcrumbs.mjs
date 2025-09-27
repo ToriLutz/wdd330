@@ -1,9 +1,14 @@
+import { getParam } from "./utils.mjs";
+
+
 document.addEventListener('DOMContentLoaded',() =>{
     const breadcrumbContainer = document.getElementById('breadcrumb-container');
 
-    const urlPath = window.location.pathname;
-    const categoryName = 'Tents'; // Replace with dynamic data if available
-    const productCount = 24; // Replace with dynamic data if needed
+
+    const params = getUrlParams();
+    const categoryName = params['category'] || 'Category'; 
+    const productCount = parseInt(params['count']) || 0;
+    const urlPath = window.location.pathname; 
 
     if (urlPath === '/' || urlPath === '/index.html') {
       breadcrumbContainer.innerHTML = '';
