@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded',() =>{
 
     const urlPath = window.location.pathname;
     const categoryName = 'Tents'; 
-    const productCount = 24; // Replace with dynamic data if needed
+    const productCount = 24; 
 
     if (urlPath === '/' || urlPath === '/index.html') {
       breadcrumbContainer.innerHTML = 'Home';
