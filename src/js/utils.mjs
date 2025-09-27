@@ -27,6 +27,9 @@ export function getParam(param) {
   const urlParams = new URLSearchParams(queryString);
   console.log(queryString);
   const product = urlParams.get('product');
-  return product;
+  const defaultValue = "Home";
+
+  return urlParams.get(param) || product || defaultValue;
+
 }
 
